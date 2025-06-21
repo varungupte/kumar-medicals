@@ -11,39 +11,21 @@ import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.converter.scalars.ScalarsConverterFactory
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkRetrofitModule {
 
-    @[Provides Singleton]
-    fun provideRetrofitBuilder(
-        okHttpClient: OkHttpClient
-    ) : Retrofit.Builder {
-        val contentType = "application/json".toMediaType()
-        return Retrofit.Builder()
-            .addConverterFactory(Json { ignoreUnknownKeys = true }.asConverterFactory(contentType))
-            .client(okHttpClient)
-    }
-
-//    @[Provides Singleton]
-//    fun provideRetrofit(
-//        retrofitBuilder: Retrofit.Builder
-//    ): Retrofit {
-//        return retrofitBuilder
-//            .baseUrl(AppConstants.BASE_URL)
-//            .build()
-//    }
-//
-    @[Provides Singleton]
-    fun provideCsvRetrofit(
+    @Provides
+    @Singleton
+    fun provideRetrofit(
         okHttpClient: OkHttpClient
     ): Retrofit {
+        val contentType = "application/json".toMediaType()
         return Retrofit.Builder()
-            .baseUrl(AppConstants.BASE_URL)
-            .addConverterFactory(ScalarsConverterFactory.create())
+            .baseUrl("https://script.google.com/")
+            .addConverterFactory(Json { ignoreUnknownKeys = true }.asConverterFactory(contentType))
             .client(okHttpClient)
             .build()
     }

@@ -30,9 +30,11 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            setProperty("archivesBaseName", "Jan Aushadi Order")
         }
         debug {
             isMinifyEnabled = false
+            setProperty("archivesBaseName", "Jan Aushadi Order")
         }
     }
     compileOptions {
