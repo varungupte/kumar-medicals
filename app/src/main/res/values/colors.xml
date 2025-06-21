@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Custom Theme Colors -->
+    <color name="light_blue_50">#E1F5FE</color> <!-- Very light blue for item cards -->
+    <color name="light_blue_100">#B3E5FC</color> 
+    <color name="cyan_500">#00BCD4</color> <!-- A calming blue/cyan for primary elements -->
+    <color name="dark_text">#212121</color>
+    <color name="light_text">#757575</color>
+    <color name="price_color">#4CAF50</color> <!-- Green for price -->
+    <color name="light_blue">#FF2196F3</color>
+    <color name="size_color">#FF757575</color>
+    <color name="gray_light">#FFE0E0E0</color>
+    <color name="quantity_bg">#FFF5F5F5</color>
+</resources>
